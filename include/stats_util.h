@@ -209,4 +209,7 @@ int is_same_row_adjacent_finger_chained_roll(int row0, int col0, int row1, int c
 int is_same_row_adjacent_finger_chained_roll_in(int row0, int col0, int row1, int col1, int row2, int col2, int row3, int col3);
 int is_same_row_adjacent_finger_chained_roll_out(int row0, int col0, int row1, int col1, int row2, int col2, int row3, int col3);
 int is_same_row_adjacent_finger_chained_roll_mix(int row0, int col0, int row1, int col1, int row2, int col2, int row3, int col3);
+
+int is_quad_alt(int row0, int col0, int row1, int col1, int row2, int col2, int row3, int col3);
+
 #endif

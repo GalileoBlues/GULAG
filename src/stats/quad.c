@@ -1391,6 +1391,25 @@ void initialize_quad_stats()
             same_row_adjacent_finger_chained_roll_mix->ngrams[i] = -1;
         }
     }
+    
+    quad_stat *quad_alt = (quad_stat *)malloc(sizeof(quad_stat));
+    add_quad_stat(quad_alt);
+    strcpy(alt->name, "Quad Alt");
+    quad_alt->weight = -INFINITY;
+    quad_alt->length = 0;
+    for (int i = 0; i < DIM4; i++)
+    {
+        unflat_quad(i, &row0, &col0, &row1, &col1, &row2, &col2, &row3, &col3);
+        if (is_quad_alt(row0, col0, row1, col1, row2, col2, row3, col3))
+        {
+            quad_alt->ngrams[i] = i;
+            quad_alt->length++;
+        }
+        else
+        {
+            quad_alt->ngrams[i] = -1;
+        }
+    }
 }
 
 /*
